@@ -5,6 +5,7 @@ Reference: http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html#_T
 
 Example:
 
+```php
 $server = 'broker.hivemq.com';
 $port = 1883;
 $client_id = 'PhpMqttPublish';
@@ -18,3 +19,4 @@ if ($socket = connect($server, $port, $client_id)) {
 }else{
     echo "Time out!\n";
 }
+```
