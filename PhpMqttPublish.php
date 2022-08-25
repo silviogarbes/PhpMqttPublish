@@ -95,11 +95,11 @@ function connect($server, $port, $client_id){
         $binary[] = base_convert($data[1], 16, 2);
     }
 
-    if ($binary[0] != '100000'){ // MQTT Control Packet Type
+    if ($binary[0] != '100000'){ // MQTT Control Packet Type (Connect acknowledgment)
         return false;
     }
 
-    if ($binary[3] != '0'){ // Connect Return code
+    if ($binary[3] != '0'){ // Connect Return code (Connection accepted)
         return false;
     }
 
